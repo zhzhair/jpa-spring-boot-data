@@ -1,0 +1,780 @@
+2019-04-27 00:04:09,780  INFO - [main                 ] com.example.demo.DemoApplication                   : Starting DemoApplication on LAPTOP-AJOD9Q7O with PID 16024 (F:\spring-boot-examples\demo-data-jpa\target\classes started by zhzhair in F:\spring-boot-examples\demo-data-jpa)
+2019-04-27 00:04:09,783  INFO - [main                 ] com.example.demo.DemoApplication                   : No active profile set, falling back to default profiles: default
+2019-04-27 00:04:11,327  INFO - [main                 ] o.s.d.r.config.RepositoryConfigurationDelegate     : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-27 00:04:11,420  INFO - [main                 ] o.s.d.r.config.RepositoryConfigurationDelegate     : Finished Spring Data repository scanning in 93ms. Found 2 repository interfaces.
+2019-04-27 00:04:11,826  INFO - [main                 ] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a0a6bdcb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-27 00:04:12,623  INFO - [main                 ] o.s.boot.web.embedded.tomcat.TomcatWebServer       : Tomcat initialized with port(s): 8080 (http)
+2019-04-27 00:04:12,639  INFO - [main                 ] org.apache.coyote.http11.Http11NioProtocol         : Initializing ProtocolHandler ["http-nio-8080"]
+2019-04-27 00:04:12,654  INFO - [main                 ] org.apache.catalina.core.StandardService           : Starting service [Tomcat]
+2019-04-27 00:04:12,654  INFO - [main                 ] org.apache.catalina.core.StandardEngine            : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-04-27 00:04:12,842  INFO - [main                 ] o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]  : Initializing Spring embedded WebApplicationContext
+2019-04-27 00:04:12,842  INFO - [main                 ] org.springframework.web.context.ContextLoader      : Root WebApplicationContext: initialization completed in 2992 ms
+2019-04-27 00:04:13,045  INFO - [main                 ] com.zaxxer.hikari.HikariDataSource                 : HikariPool-1 - Starting...
+2019-04-27 00:04:13,201  INFO - [main                 ] com.zaxxer.hikari.HikariDataSource                 : HikariPool-1 - Start completed.
+2019-04-27 00:04:13,248  INFO - [main                 ] org.hibernate.jpa.internal.util.LogHelper          : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-04-27 00:04:13,342  INFO - [main                 ] org.hibernate.Version                              : HHH000412: Hibernate Core {5.3.9.Final}
+2019-04-27 00:04:13,342  INFO - [main                 ] org.hibernate.cfg.Environment                      : HHH000206: hibernate.properties not found
+2019-04-27 00:04:13,498  INFO - [main                 ] org.hibernate.annotations.common.Version           : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-04-27 00:04:13,638  INFO - [main                 ] org.hibernate.dialect.Dialect                      : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-04-27 00:04:14,185  INFO - [main                 ] o.s.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-04-27 00:04:15,712  INFO - [main                 ] s.d.s.web.plugins.DocumentationPluginsBootstrapper : Context refreshed
+2019-04-27 00:04:15,744  INFO - [main                 ] s.d.s.web.plugins.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-04-27 00:04:15,759  INFO - [main                 ] s.d.spring.web.scanners.ApiListingReferenceScanner : Scanning for api listing references
+2019-04-27 00:04:15,947  INFO - [main                 ] org.apache.coyote.http11.Http11NioProtocol         : Starting ProtocolHandler ["http-nio-8080"]
+2019-04-27 00:04:16,002  INFO - [main                 ] o.s.boot.web.embedded.tomcat.TomcatWebServer       : Tomcat started on port(s): 8080 (http) with context path ''
+2019-04-27 00:04:16,002  INFO - [main                 ] com.example.demo.DemoApplication                   : Started DemoApplication in 6.782 seconds (JVM running for 7.902)
+2019-04-27 00:04:31,390  INFO - [http-nio-8080-exec-1 ] o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-04-27 00:04:31,391  INFO - [http-nio-8080-exec-1 ] org.springframework.web.servlet.DispatcherServlet  : Initializing Servlet 'dispatcherServlet'
+2019-04-27 00:04:31,404  INFO - [http-nio-8080-exec-1 ] org.springframework.web.servlet.DispatcherServlet  : Completed initialization in 13 ms
+2019-04-27 00:04:41,616  INFO - [http-nio-8080-exec-10] c.e.demo.feedback.controller.FeedbackController    : 前端调用方法开始----uploadFeedback---->：#{"URL地址":/feedback/upload, "HTTP方法":POST，参数：, "feedBackInfo":FeedbackInfo{, appVersion='1.0', sysVersion='7.1', osType='Android', content='后台代码写的真棒', onlineStatus='WIFI'}, "userId":5}
+2019-04-27 00:04:41,734  WARN - [http-nio-8080-exec-10] org.hibernate.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1064, SQLState: 42000
+2019-04-27 00:04:41,734 ERROR - [http-nio-8080-exec-10] org.hibernate.engine.jdbc.spi.SqlExceptionHelper   : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '11.feedback (app_version, content, create_time, ignore_count, mobile, online_sta' at line 1
+2019-04-27 00:04:41,749  INFO - [http-nio-8080-exec-10] com.example.demo.common.controller.BaseController  : Exception
+org.springframework.dao.InvalidDataAccessResourceUsageException: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:279)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:253)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:527)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:242)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:153)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.SurroundingTransactionDetectorMethodInterceptor.invoke(SurroundingTransactionDetectorMethodInterceptor.java:61)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy119.saveAndFlush(Unknown Source)
+	at com.example.demo.feedback.service.impl.FeedbackServiceImpl.uploadFeedback(FeedbackServiceImpl.java:44)
+	at com.example.demo.feedback.controller.FeedbackController.uploadFeedback(FeedbackController.java:29)
+	at com.example.demo.feedback.controller.FeedbackController$$FastClassBySpringCGLIB$$90ba2004.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:88)
+	at com.example.demo.common.config.aspect.log.LogAspect.autoLogRecord(LogAspect.java:64)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:633)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.example.demo.feedback.controller.FeedbackController$$EnhancerBySpringCGLIB$$96fcd2a8.uploadFeedback(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.hibernate.exception.SQLGrammarException: could not execute statement
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:63)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:178)
+	at org.hibernate.dialect.identity.GetGeneratedKeysDelegate.executeAndExtract(GetGeneratedKeysDelegate.java:57)
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:42)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3075)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3665)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:81)
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:645)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:282)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:263)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:317)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:332)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:289)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:196)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:127)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:192)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:135)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:62)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:799)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:784)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:308)
+	at com.sun.proxy.$Proxy112.persist(Unknown Source)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:489)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.saveAndFlush(SimpleJpaRepository.java:503)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:359)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:200)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:644)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:608)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$invoke$3(RepositoryFactorySupport.java:595)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:595)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:59)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	... 72 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '11.feedback (app_version, content, create_time, ignore_count, mobile, online_sta' at line 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:970)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1109)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1057)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1377)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1042)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:175)
+	... 116 common frames omitted
+2019-04-27 00:04:41,757  INFO - [http-nio-8080-exec-10] c.e.d.c.c.m.i.RequestTimeConsumingInterceptor      : 5       /feedback/upload                                            181ms
+2019-04-27 00:09:44,600  INFO - [main                 ] com.example.demo.DemoApplication                   : Starting DemoApplication on LAPTOP-AJOD9Q7O with PID 13836 (F:\spring-boot-examples\demo-data-jpa\target\classes started by zhzhair in F:\spring-boot-examples\demo-data-jpa)
+2019-04-27 00:09:44,600  INFO - [main                 ] com.example.demo.DemoApplication                   : No active profile set, falling back to default profiles: default
+2019-04-27 00:09:45,975  INFO - [main                 ] o.s.d.r.config.RepositoryConfigurationDelegate     : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-27 00:09:46,100  INFO - [main                 ] o.s.d.r.config.RepositoryConfigurationDelegate     : Finished Spring Data repository scanning in 110ms. Found 2 repository interfaces.
+2019-04-27 00:09:46,475  INFO - [main                 ] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$10a2a0c7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-27 00:09:47,459  INFO - [main                 ] o.s.boot.web.embedded.tomcat.TomcatWebServer       : Tomcat initialized with port(s): 8080 (http)
+2019-04-27 00:09:47,490  INFO - [main                 ] org.apache.coyote.http11.Http11NioProtocol         : Initializing ProtocolHandler ["http-nio-8080"]
+2019-04-27 00:09:47,506  INFO - [main                 ] org.apache.catalina.core.StandardService           : Starting service [Tomcat]
+2019-04-27 00:09:47,506  INFO - [main                 ] org.apache.catalina.core.StandardEngine            : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-04-27 00:09:47,693  INFO - [main                 ] o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]  : Initializing Spring embedded WebApplicationContext
+2019-04-27 00:09:47,693  INFO - [main                 ] org.springframework.web.context.ContextLoader      : Root WebApplicationContext: initialization completed in 3046 ms
+2019-04-27 00:09:48,037  INFO - [main                 ] com.zaxxer.hikari.HikariDataSource                 : HikariPool-1 - Starting...
+2019-04-27 00:09:48,177  INFO - [main                 ] com.zaxxer.hikari.HikariDataSource                 : HikariPool-1 - Start completed.
+2019-04-27 00:09:48,240  INFO - [main                 ] org.hibernate.jpa.internal.util.LogHelper          : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-04-27 00:09:48,349  INFO - [main                 ] org.hibernate.Version                              : HHH000412: Hibernate Core {5.3.9.Final}
+2019-04-27 00:09:48,349  INFO - [main                 ] org.hibernate.cfg.Environment                      : HHH000206: hibernate.properties not found
+2019-04-27 00:09:48,505  INFO - [main                 ] org.hibernate.annotations.common.Version           : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-04-27 00:09:48,677  INFO - [main                 ] org.hibernate.dialect.Dialect                      : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-04-27 00:09:49,288  INFO - [main                 ] o.s.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-04-27 00:09:50,787  INFO - [main                 ] s.d.s.web.plugins.DocumentationPluginsBootstrapper : Context refreshed
+2019-04-27 00:09:50,803  INFO - [main                 ] s.d.s.web.plugins.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-04-27 00:09:50,819  INFO - [main                 ] s.d.spring.web.scanners.ApiListingReferenceScanner : Scanning for api listing references
+2019-04-27 00:09:50,991  INFO - [main                 ] org.apache.coyote.http11.Http11NioProtocol         : Starting ProtocolHandler ["http-nio-8080"]
+2019-04-27 00:09:51,053  INFO - [main                 ] o.s.boot.web.embedded.tomcat.TomcatWebServer       : Tomcat started on port(s): 8080 (http) with context path ''
+2019-04-27 00:09:51,053  INFO - [main                 ] com.example.demo.DemoApplication                   : Started DemoApplication in 7.047 seconds (JVM running for 7.573)
+2019-04-27 00:10:06,660  INFO - [http-nio-8080-exec-1 ] o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-04-27 00:10:06,661  INFO - [http-nio-8080-exec-1 ] org.springframework.web.servlet.DispatcherServlet  : Initializing Servlet 'dispatcherServlet'
+2019-04-27 00:10:06,676  INFO - [http-nio-8080-exec-1 ] org.springframework.web.servlet.DispatcherServlet  : Completed initialization in 15 ms
+2019-04-27 00:10:28,373  INFO - [http-nio-8080-exec-11] c.e.demo.feedback.controller.FeedbackController    : 前端调用方法开始----uploadFeedback---->：#{"URL地址":/feedback/upload, "HTTP方法":POST，参数：, "feedBackInfo":FeedbackInfo{, appVersion='1.0', sysVersion='7.1', osType='Android', content='后台代码写的真棒', onlineStatus='WIFI'}, "userId":3256}
+2019-04-27 00:10:28,475  WARN - [http-nio-8080-exec-11] org.hibernate.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1064, SQLState: 42000
+2019-04-27 00:10:28,475 ERROR - [http-nio-8080-exec-11] org.hibernate.engine.jdbc.spi.SqlExceptionHelper   : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '11.feedback (app_version, content, create_time, ignore_count, mobile, online_sta' at line 1
+2019-04-27 00:10:28,488  INFO - [http-nio-8080-exec-11] com.example.demo.common.controller.BaseController  : Exception
+org.springframework.dao.InvalidDataAccessResourceUsageException: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:279)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:253)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:527)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:242)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:153)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.SurroundingTransactionDetectorMethodInterceptor.invoke(SurroundingTransactionDetectorMethodInterceptor.java:61)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy120.saveAndFlush(Unknown Source)
+	at com.example.demo.feedback.service.impl.FeedbackServiceImpl.uploadFeedback(FeedbackServiceImpl.java:44)
+	at com.example.demo.feedback.controller.FeedbackController.uploadFeedback(FeedbackController.java:29)
+	at com.example.demo.feedback.controller.FeedbackController$$FastClassBySpringCGLIB$$90ba2004.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:88)
+	at com.example.demo.common.config.aspect.log.LogAspect.autoLogRecord(LogAspect.java:64)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:633)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.example.demo.feedback.controller.FeedbackController$$EnhancerBySpringCGLIB$$3006f27b.uploadFeedback(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.hibernate.exception.SQLGrammarException: could not execute statement
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:63)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:178)
+	at org.hibernate.dialect.identity.GetGeneratedKeysDelegate.executeAndExtract(GetGeneratedKeysDelegate.java:57)
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:42)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3075)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3665)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:81)
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:645)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:282)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:263)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:317)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:332)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:289)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:196)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:127)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:192)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:135)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:62)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:799)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:784)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:308)
+	at com.sun.proxy.$Proxy113.persist(Unknown Source)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:489)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.saveAndFlush(SimpleJpaRepository.java:503)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:359)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:200)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:644)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:608)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$invoke$3(RepositoryFactorySupport.java:595)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:595)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:59)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	... 72 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '11.feedback (app_version, content, create_time, ignore_count, mobile, online_sta' at line 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:970)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1109)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1057)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1377)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1042)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:175)
+	... 116 common frames omitted
+2019-04-27 00:10:28,498  INFO - [http-nio-8080-exec-11] c.e.d.c.c.m.i.RequestTimeConsumingInterceptor      : 3256    /feedback/upload                                            162ms
+2019-04-27 00:10:59,494  INFO - [main                 ] com.example.demo.DemoApplication                   : Starting DemoApplication on LAPTOP-AJOD9Q7O with PID 87056 (F:\spring-boot-examples\demo-data-jpa\target\classes started by zhzhair in F:\spring-boot-examples\demo-data-jpa)
+2019-04-27 00:10:59,494  INFO - [main                 ] com.example.demo.DemoApplication                   : No active profile set, falling back to default profiles: default
+2019-04-27 00:11:00,884  INFO - [main                 ] o.s.d.r.config.RepositoryConfigurationDelegate     : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-27 00:11:00,994  INFO - [main                 ] o.s.d.r.config.RepositoryConfigurationDelegate     : Finished Spring Data repository scanning in 94ms. Found 2 repository interfaces.
+2019-04-27 00:11:01,400  INFO - [main                 ] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1f613c16] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-27 00:11:02,134  INFO - [main                 ] o.s.boot.web.embedded.tomcat.TomcatWebServer       : Tomcat initialized with port(s): 8080 (http)
+2019-04-27 00:11:02,150  INFO - [main                 ] org.apache.coyote.http11.Http11NioProtocol         : Initializing ProtocolHandler ["http-nio-8080"]
+2019-04-27 00:11:02,150  INFO - [main                 ] org.apache.catalina.core.StandardService           : Starting service [Tomcat]
+2019-04-27 00:11:02,150  INFO - [main                 ] org.apache.catalina.core.StandardEngine            : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-04-27 00:11:02,322  INFO - [main                 ] o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]  : Initializing Spring embedded WebApplicationContext
+2019-04-27 00:11:02,322  INFO - [main                 ] org.springframework.web.context.ContextLoader      : Root WebApplicationContext: initialization completed in 2765 ms
+2019-04-27 00:11:02,556  INFO - [main                 ] com.zaxxer.hikari.HikariDataSource                 : HikariPool-1 - Starting...
+2019-04-27 00:11:02,696  INFO - [main                 ] com.zaxxer.hikari.HikariDataSource                 : HikariPool-1 - Start completed.
+2019-04-27 00:11:02,743  INFO - [main                 ] org.hibernate.jpa.internal.util.LogHelper          : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-04-27 00:11:02,837  INFO - [main                 ] org.hibernate.Version                              : HHH000412: Hibernate Core {5.3.9.Final}
+2019-04-27 00:11:02,837  INFO - [main                 ] org.hibernate.cfg.Environment                      : HHH000206: hibernate.properties not found
+2019-04-27 00:11:02,962  INFO - [main                 ] org.hibernate.annotations.common.Version           : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-04-27 00:11:03,228  INFO - [main                 ] org.hibernate.dialect.Dialect                      : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-04-27 00:11:03,794  INFO - [main                 ] o.s.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-04-27 00:11:05,588  INFO - [main                 ] s.d.s.web.plugins.DocumentationPluginsBootstrapper : Context refreshed
+2019-04-27 00:11:05,619  INFO - [main                 ] s.d.s.web.plugins.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-04-27 00:11:05,635  INFO - [main                 ] s.d.spring.web.scanners.ApiListingReferenceScanner : Scanning for api listing references
+2019-04-27 00:11:05,838  INFO - [main                 ] org.apache.coyote.http11.Http11NioProtocol         : Starting ProtocolHandler ["http-nio-8080"]
+2019-04-27 00:11:05,885  INFO - [main                 ] o.s.boot.web.embedded.tomcat.TomcatWebServer       : Tomcat started on port(s): 8080 (http) with context path ''
+2019-04-27 00:11:05,885  INFO - [main                 ] com.example.demo.DemoApplication                   : Started DemoApplication in 6.911 seconds (JVM running for 7.417)
+2019-04-27 00:11:13,730  INFO - [http-nio-8080-exec-1 ] o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-04-27 00:11:13,730  INFO - [http-nio-8080-exec-1 ] org.springframework.web.servlet.DispatcherServlet  : Initializing Servlet 'dispatcherServlet'
+2019-04-27 00:11:13,746  INFO - [http-nio-8080-exec-1 ] org.springframework.web.servlet.DispatcherServlet  : Completed initialization in 16 ms
+2019-04-27 00:11:13,840  INFO - [http-nio-8080-exec-1 ] c.e.demo.feedback.controller.FeedbackController    : 前端调用方法开始----uploadFeedback---->：#{"URL地址":/feedback/upload, "HTTP方法":POST，参数：, "feedBackInfo":FeedbackInfo{, appVersion='1.0', sysVersion='7.1', osType='Android', content='后台代码写的真棒', onlineStatus='WIFI'}, "userId":3256}
+2019-04-27 00:11:13,928  WARN - [http-nio-8080-exec-1 ] org.hibernate.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1064, SQLState: 42000
+2019-04-27 00:11:13,928 ERROR - [http-nio-8080-exec-1 ] org.hibernate.engine.jdbc.spi.SqlExceptionHelper   : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '11.feedback (app_version, content, create_time, ignore_count, mobile, online_sta' at line 1
+2019-04-27 00:11:13,942  INFO - [http-nio-8080-exec-1 ] com.example.demo.common.controller.BaseController  : Exception
+org.springframework.dao.InvalidDataAccessResourceUsageException: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:279)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:253)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:527)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:242)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:153)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.SurroundingTransactionDetectorMethodInterceptor.invoke(SurroundingTransactionDetectorMethodInterceptor.java:61)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy120.save(Unknown Source)
+	at com.example.demo.feedback.service.impl.FeedbackServiceImpl.uploadFeedback(FeedbackServiceImpl.java:44)
+	at com.example.demo.feedback.controller.FeedbackController.uploadFeedback(FeedbackController.java:29)
+	at com.example.demo.feedback.controller.FeedbackController$$FastClassBySpringCGLIB$$90ba2004.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:88)
+	at com.example.demo.common.config.aspect.log.LogAspect.autoLogRecord(LogAspect.java:64)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:633)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.example.demo.feedback.controller.FeedbackController$$EnhancerBySpringCGLIB$$b6139558.uploadFeedback(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.hibernate.exception.SQLGrammarException: could not execute statement
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:63)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:178)
+	at org.hibernate.dialect.identity.GetGeneratedKeysDelegate.executeAndExtract(GetGeneratedKeysDelegate.java:57)
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:42)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3075)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3665)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:81)
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:645)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:282)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:263)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:317)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:332)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:289)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:196)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:127)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:192)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:135)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:62)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:799)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:784)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:308)
+	at com.sun.proxy.$Proxy113.persist(Unknown Source)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:489)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:359)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:200)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:644)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:608)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$invoke$3(RepositoryFactorySupport.java:595)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:595)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:59)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	... 72 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '11.feedback (app_version, content, create_time, ignore_count, mobile, online_sta' at line 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:970)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1109)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1057)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1377)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1042)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:175)
+	... 115 common frames omitted
+2019-04-27 00:11:14,000  INFO - [http-nio-8080-exec-1 ] c.e.d.c.c.m.i.RequestTimeConsumingInterceptor      : 3256    /feedback/upload                                            235ms
+2019-04-27 00:11:45,731  INFO - [http-nio-8080-exec-2 ] c.e.demo.feedback.controller.FeedbackController    : 前端调用方法开始----getFeedbackDetail---->：#{"URL地址":/feedback/getFeedbackDetail, "HTTP方法":POST，参数：, "feedbackWhere":FeedbackWhere{fieldNum=3, handleStatus=1, searchValue='二哈', page=1, pageSize=20}}
+2019-04-27 00:11:45,755  INFO - [http-nio-8080-exec-2 ] o.h.hql.internal.QueryTranslatorFactoryInitiator   : HHH000397: Using ASTQueryTranslatorFactory
+2019-04-27 00:11:45,842  WARN - [http-nio-8080-exec-2 ] org.hibernate.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1064, SQLState: 42000
+2019-04-27 00:11:45,842 ERROR - [http-nio-8080-exec-2 ] org.hibernate.engine.jdbc.spi.SqlExceptionHelper   : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '11.feedback feedbacken0_ where feedbacken0_.reply_count>0 and feedbacken0_.ignor' at line 1
+2019-04-27 00:11:45,844  INFO - [http-nio-8080-exec-2 ] com.example.demo.common.controller.BaseController  : Exception
+org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:279)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:253)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:527)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:242)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:153)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.SurroundingTransactionDetectorMethodInterceptor.invoke(SurroundingTransactionDetectorMethodInterceptor.java:61)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy120.count(Unknown Source)
+	at com.example.demo.feedback.service.impl.FeedbackServiceImpl.getFeedbackDetail(FeedbackServiceImpl.java:123)
+	at com.example.demo.feedback.controller.FeedbackController.getFeedbackDetail(FeedbackController.java:60)
+	at com.example.demo.feedback.controller.FeedbackController$$FastClassBySpringCGLIB$$90ba2004.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:88)
+	at com.example.demo.common.config.aspect.log.LogAspect.autoLogRecord(LogAspect.java:64)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:633)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.example.demo.feedback.controller.FeedbackController$$EnhancerBySpringCGLIB$$b6139558.getFeedbackDetail(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:63)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:69)
+	at org.hibernate.loader.Loader.getResultSet(Loader.java:2167)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1930)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1892)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:937)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:340)
+	at org.hibernate.loader.Loader.doList(Loader.java:2689)
+	at org.hibernate.loader.Loader.doList(Loader.java:2672)
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2506)
+	at org.hibernate.loader.Loader.list(Loader.java:2501)
+	at org.hibernate.loader.hql.QueryLoader.list(QueryLoader.java:504)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.list(QueryTranslatorImpl.java:395)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.performList(HQLQueryPlan.java:220)
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1507)
+	at org.hibernate.query.internal.AbstractProducedQuery.doList(AbstractProducedQuery.java:1537)
+	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1505)
+	at org.hibernate.query.Query.getResultList(Query.java:132)
+	at org.hibernate.query.criteria.internal.compile.CriteriaQueryTypeQueryAdapter.getResultList(CriteriaQueryTypeQueryAdapter.java:74)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.executeCountQuery(SimpleJpaRepository.java:734)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.count(SimpleJpaRepository.java:478)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:359)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:200)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:644)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:608)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$invoke$3(RepositoryFactorySupport.java:595)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:595)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:59)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	... 72 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '11.feedback feedbacken0_ where feedbacken0_.reply_count>0 and feedbacken0_.ignor' at line 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:970)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1020)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:60)
+	... 109 common frames omitted
+2019-04-27 00:11:45,848  INFO - [http-nio-8080-exec-2 ] c.e.d.c.c.m.i.RequestTimeConsumingInterceptor      : null    /feedback/getFeedbackDetail                                 128ms
+2019-04-27 00:13:57,773  INFO - [main                 ] com.example.demo.DemoApplication                   : Starting DemoApplication on LAPTOP-AJOD9Q7O with PID 62656 (F:\spring-boot-examples\demo-data-jpa\target\classes started by zhzhair in F:\spring-boot-examples\demo-data-jpa)
+2019-04-27 00:13:57,773  INFO - [main                 ] com.example.demo.DemoApplication                   : No active profile set, falling back to default profiles: default
+2019-04-27 00:13:59,148  INFO - [main                 ] o.s.d.r.config.RepositoryConfigurationDelegate     : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-27 00:13:59,243  INFO - [main                 ] o.s.d.r.config.RepositoryConfigurationDelegate     : Finished Spring Data repository scanning in 80ms. Found 2 repository interfaces.
+2019-04-27 00:13:59,696  INFO - [main                 ] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$da3033e0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-27 00:14:00,446  INFO - [main                 ] o.s.boot.web.embedded.tomcat.TomcatWebServer       : Tomcat initialized with port(s): 8080 (http)
+2019-04-27 00:14:00,461  INFO - [main                 ] org.apache.coyote.http11.Http11NioProtocol         : Initializing ProtocolHandler ["http-nio-8080"]
+2019-04-27 00:14:00,477  INFO - [main                 ] org.apache.catalina.core.StandardService           : Starting service [Tomcat]
+2019-04-27 00:14:00,477  INFO - [main                 ] org.apache.catalina.core.StandardEngine            : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-04-27 00:14:00,665  INFO - [main                 ] o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]  : Initializing Spring embedded WebApplicationContext
+2019-04-27 00:14:00,665  INFO - [main                 ] org.springframework.web.context.ContextLoader      : Root WebApplicationContext: initialization completed in 2845 ms
+2019-04-27 00:14:00,868  INFO - [main                 ] com.zaxxer.hikari.HikariDataSource                 : HikariPool-1 - Starting...
+2019-04-27 00:14:01,039  INFO - [main                 ] com.zaxxer.hikari.HikariDataSource                 : HikariPool-1 - Start completed.
+2019-04-27 00:14:01,102  INFO - [main                 ] org.hibernate.jpa.internal.util.LogHelper          : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-04-27 00:14:01,164  INFO - [main                 ] org.hibernate.Version                              : HHH000412: Hibernate Core {5.3.9.Final}
+2019-04-27 00:14:01,164  INFO - [main                 ] org.hibernate.cfg.Environment                      : HHH000206: hibernate.properties not found
+2019-04-27 00:14:01,321  INFO - [main                 ] org.hibernate.annotations.common.Version           : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-04-27 00:14:01,477  INFO - [main                 ] org.hibernate.dialect.Dialect                      : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-04-27 00:14:02,055  INFO - [main                 ] o.s.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-04-27 00:14:03,679  INFO - [main                 ] s.d.s.web.plugins.DocumentationPluginsBootstrapper : Context refreshed
+2019-04-27 00:14:03,726  INFO - [main                 ] s.d.s.web.plugins.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-04-27 00:14:03,742  INFO - [main                 ] s.d.spring.web.scanners.ApiListingReferenceScanner : Scanning for api listing references
+2019-04-27 00:14:03,992  INFO - [main                 ] org.apache.coyote.http11.Http11NioProtocol         : Starting ProtocolHandler ["http-nio-8080"]
+2019-04-27 00:14:04,039  INFO - [main                 ] o.s.boot.web.embedded.tomcat.TomcatWebServer       : Tomcat started on port(s): 8080 (http) with context path ''
+2019-04-27 00:14:04,039  INFO - [main                 ] com.example.demo.DemoApplication                   : Started DemoApplication in 6.813 seconds (JVM running for 7.318)
+2019-04-27 00:14:16,017  INFO - [http-nio-8080-exec-1 ] o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-04-27 00:14:16,018  INFO - [http-nio-8080-exec-1 ] org.springframework.web.servlet.DispatcherServlet  : Initializing Servlet 'dispatcherServlet'
+2019-04-27 00:14:16,032  INFO - [http-nio-8080-exec-1 ] org.springframework.web.servlet.DispatcherServlet  : Completed initialization in 14 ms
+2019-04-27 00:14:16,149  INFO - [http-nio-8080-exec-1 ] c.e.demo.feedback.controller.FeedbackController    : 前端调用方法开始----getFeedbackDetail---->：#{"URL地址":/feedback/getFeedbackDetail, "HTTP方法":POST，参数：, "feedbackWhere":FeedbackWhere{fieldNum=3, handleStatus=1, searchValue='二哈', page=1, pageSize=20}}
+2019-04-27 00:14:16,204  INFO - [http-nio-8080-exec-1 ] o.h.hql.internal.QueryTranslatorFactoryInitiator   : HHH000397: Using ASTQueryTranslatorFactory
+2019-04-27 00:14:16,387  INFO - [http-nio-8080-exec-1 ] c.e.demo.feedback.controller.FeedbackController    : 前端调用方法结束----getFeedbackDetail---->：返回值: com.example.demo.common.dto.BaseResponse@451e4264
+2019-04-27 00:14:16,439  INFO - [http-nio-8080-exec-1 ] c.e.d.c.c.m.i.RequestTimeConsumingInterceptor      : null    /feedback/getFeedbackDetail                                 390ms
+2019-04-27 00:14:27,194  INFO - [http-nio-8080-exec-2 ] c.e.demo.feedback.controller.FeedbackController    : 前端调用方法开始----getFeedbackDetail---->：#{"URL地址":/feedback/getFeedbackDetail, "HTTP方法":POST，参数：, "feedbackWhere":FeedbackWhere{fieldNum=3, handleStatus=0, searchValue='二哈', page=1, pageSize=20}}
+2019-04-27 00:14:27,221  INFO - [http-nio-8080-exec-2 ] c.e.demo.feedback.controller.FeedbackController    : 前端调用方法结束----getFeedbackDetail---->：返回值: com.example.demo.common.dto.BaseResponse@7ba97791
+2019-04-27 00:14:27,232  INFO - [http-nio-8080-exec-2 ] c.e.d.c.c.m.i.RequestTimeConsumingInterceptor      : null    /feedback/getFeedbackDetail                                 39ms
+2019-04-27 00:14:38,784  INFO - [http-nio-8080-exec-3 ] c.e.demo.feedback.controller.FeedbackController    : 前端调用方法开始----getFeedbackDetail---->：#{"URL地址":/feedback/getFeedbackDetail, "HTTP方法":POST，参数：, "feedbackWhere":FeedbackWhere{fieldNum=1, handleStatus=1, searchValue='二哈', page=1, pageSize=20}}
+2019-04-27 00:14:38,802  INFO - [http-nio-8080-exec-3 ] c.e.demo.feedback.controller.FeedbackController    : 前端调用方法结束----getFeedbackDetail---->：返回值: com.example.demo.common.dto.BaseResponse@3e41c299
+2019-04-27 00:14:38,803  INFO - [http-nio-8080-exec-3 ] c.e.d.c.c.m.i.RequestTimeConsumingInterceptor      : null    /feedback/getFeedbackDetail                                 20ms
+2019-04-27 00:14:44,814  INFO - [http-nio-8080-exec-4 ] c.e.demo.feedback.controller.FeedbackController    : 前端调用方法开始----uploadFeedback---->：#{"URL地址":/feedback/upload, "HTTP方法":POST，参数：, "feedBackInfo":FeedbackInfo{, appVersion='1.0', sysVersion='7.1', osType='Android', content='后台代码写的真棒', onlineStatus='WIFI'}, "userId":3256}
+2019-04-27 00:14:44,852  INFO - [http-nio-8080-exec-4 ] c.e.demo.feedback.controller.FeedbackController    : 前端调用方法结束----uploadFeedback---->：返回值: com.example.demo.common.dto.BaseResponse@3b9c3aa8
+2019-04-27 00:14:44,854  INFO - [http-nio-8080-exec-4 ] c.e.d.c.c.m.i.RequestTimeConsumingInterceptor      : 3256    /feedback/upload                                            47ms
+2019-04-27 00:21:32,259  INFO - [main                 ] com.example.demo.DemoApplication                   : Starting DemoApplication on LAPTOP-AJOD9Q7O with PID 65764 (F:\spring-boot-examples\demo-data-jpa\target\classes started by zhzhair in F:\spring-boot-examples\demo-data-jpa)
+2019-04-27 00:21:32,259  INFO - [main                 ] com.example.demo.DemoApplication                   : No active profile set, falling back to default profiles: default
+2019-04-27 00:21:33,087  INFO - [main                 ] o.s.d.r.config.RepositoryConfigurationDelegate     : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-27 00:21:33,150  INFO - [main                 ] o.s.d.r.config.RepositoryConfigurationDelegate     : Finished Spring Data repository scanning in 63ms. Found 2 repository interfaces.
+2019-04-27 00:21:33,381  INFO - [main                 ] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e269dc0c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-27 00:21:33,756  INFO - [main                 ] o.s.boot.web.embedded.tomcat.TomcatWebServer       : Tomcat initialized with port(s): 8080 (http)
+2019-04-27 00:21:33,756  INFO - [main                 ] org.apache.coyote.http11.Http11NioProtocol         : Initializing ProtocolHandler ["http-nio-8080"]
+2019-04-27 00:21:33,772  INFO - [main                 ] org.apache.catalina.core.StandardService           : Starting service [Tomcat]
+2019-04-27 00:21:33,772  INFO - [main                 ] org.apache.catalina.core.StandardEngine            : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-04-27 00:21:33,881  INFO - [main                 ] o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]  : Initializing Spring embedded WebApplicationContext
+2019-04-27 00:21:33,881  INFO - [main                 ] org.springframework.web.context.ContextLoader      : Root WebApplicationContext: initialization completed in 1591 ms
+2019-04-27 00:21:34,084  INFO - [main                 ] com.zaxxer.hikari.HikariDataSource                 : HikariPool-1 - Starting...
+2019-04-27 00:21:34,162  INFO - [main                 ] com.zaxxer.hikari.HikariDataSource                 : HikariPool-1 - Start completed.
+2019-04-27 00:21:34,193  INFO - [main                 ] org.hibernate.jpa.internal.util.LogHelper          : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-04-27 00:21:34,240  INFO - [main                 ] org.hibernate.Version                              : HHH000412: Hibernate Core {5.3.9.Final}
+2019-04-27 00:21:34,240  INFO - [main                 ] org.hibernate.cfg.Environment                      : HHH000206: hibernate.properties not found
+2019-04-27 00:21:34,350  INFO - [main                 ] org.hibernate.annotations.common.Version           : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-04-27 00:21:34,448  INFO - [main                 ] org.hibernate.dialect.Dialect                      : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-04-27 00:21:34,838  INFO - [main                 ] o.s.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-04-27 00:21:35,822  INFO - [main                 ] s.d.s.web.plugins.DocumentationPluginsBootstrapper : Context refreshed
+2019-04-27 00:21:35,822  INFO - [main                 ] s.d.s.web.plugins.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-04-27 00:21:35,838  INFO - [main                 ] s.d.spring.web.scanners.ApiListingReferenceScanner : Scanning for api listing references
+2019-04-27 00:21:35,963  INFO - [main                 ] org.apache.coyote.http11.Http11NioProtocol         : Starting ProtocolHandler ["http-nio-8080"]
+2019-04-27 00:21:35,994  INFO - [main                 ] o.s.boot.web.embedded.tomcat.TomcatWebServer       : Tomcat started on port(s): 8080 (http) with context path ''
+2019-04-27 00:21:35,994  INFO - [main                 ] com.example.demo.DemoApplication                   : Started DemoApplication in 4.438 seconds (JVM running for 5.841)
+2019-04-27 00:21:40,749  INFO - [http-nio-8080-exec-1 ] o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-04-27 00:21:40,749  INFO - [http-nio-8080-exec-1 ] org.springframework.web.servlet.DispatcherServlet  : Initializing Servlet 'dispatcherServlet'
+2019-04-27 00:21:40,757  INFO - [http-nio-8080-exec-1 ] org.springframework.web.servlet.DispatcherServlet  : Completed initialization in 8 ms
+2019-04-27 00:21:40,771  WARN - [http-nio-8080-exec-1 ] org.springframework.web.servlet.PageNotFound       : No mapping for GET /swagger-ui.html
+2019-04-27 00:21:40,932  INFO - [http-nio-8080-exec-1 ] c.e.d.c.c.m.i.RequestTimeConsumingInterceptor      : null    /error                                                      16ms
+2019-04-27 00:25:59,023  INFO - [main                 ] com.example.demo.DemoApplication                   : Starting DemoApplication on LAPTOP-AJOD9Q7O with PID 76100 (F:\spring-boot-examples\demo-data-jpa\target\classes started by zhzhair in F:\spring-boot-examples\demo-data-jpa)
+2019-04-27 00:25:59,023  INFO - [main                 ] com.example.demo.DemoApplication                   : No active profile set, falling back to default profiles: default
+2019-04-27 00:25:59,837  INFO - [main                 ] o.s.d.r.config.RepositoryConfigurationDelegate     : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-27 00:25:59,899  INFO - [main                 ] o.s.d.r.config.RepositoryConfigurationDelegate     : Finished Spring Data repository scanning in 62ms. Found 2 repository interfaces.
+2019-04-27 00:26:00,131  INFO - [main                 ] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$54a92264] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-27 00:26:00,491  INFO - [main                 ] o.s.boot.web.embedded.tomcat.TomcatWebServer       : Tomcat initialized with port(s): 8080 (http)
+2019-04-27 00:26:00,491  INFO - [main                 ] org.apache.coyote.http11.Http11NioProtocol         : Initializing ProtocolHandler ["http-nio-8080"]
+2019-04-27 00:26:00,506  INFO - [main                 ] org.apache.catalina.core.StandardService           : Starting service [Tomcat]
+2019-04-27 00:26:00,506  INFO - [main                 ] org.apache.catalina.core.StandardEngine            : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-04-27 00:26:00,631  INFO - [main                 ] o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]  : Initializing Spring embedded WebApplicationContext
+2019-04-27 00:26:00,631  INFO - [main                 ] org.springframework.web.context.ContextLoader      : Root WebApplicationContext: initialization completed in 1577 ms
+2019-04-27 00:26:00,838  INFO - [main                 ] com.zaxxer.hikari.HikariDataSource                 : HikariPool-1 - Starting...
+2019-04-27 00:26:00,963  INFO - [main                 ] com.zaxxer.hikari.HikariDataSource                 : HikariPool-1 - Start completed.
+2019-04-27 00:26:00,994  INFO - [main                 ] org.hibernate.jpa.internal.util.LogHelper          : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-04-27 00:26:01,041  INFO - [main                 ] org.hibernate.Version                              : HHH000412: Hibernate Core {5.3.9.Final}
+2019-04-27 00:26:01,041  INFO - [main                 ] org.hibernate.cfg.Environment                      : HHH000206: hibernate.properties not found
+2019-04-27 00:26:01,135  INFO - [main                 ] org.hibernate.annotations.common.Version           : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-04-27 00:26:01,228  INFO - [main                 ] org.hibernate.dialect.Dialect                      : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-04-27 00:26:01,634  INFO - [main                 ] o.s.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-04-27 00:26:02,447  INFO - [main                 ] s.d.s.web.plugins.DocumentationPluginsBootstrapper : Context refreshed
+2019-04-27 00:26:02,462  INFO - [main                 ] s.d.s.web.plugins.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-04-27 00:26:02,462  INFO - [main                 ] s.d.spring.web.scanners.ApiListingReferenceScanner : Scanning for api listing references
+2019-04-27 00:26:02,587  INFO - [main                 ] org.apache.coyote.http11.Http11NioProtocol         : Starting ProtocolHandler ["http-nio-8080"]
+2019-04-27 00:26:02,619  INFO - [main                 ] o.s.boot.web.embedded.tomcat.TomcatWebServer       : Tomcat started on port(s): 8080 (http) with context path ''
+2019-04-27 00:26:02,619  INFO - [main                 ] com.example.demo.DemoApplication                   : Started DemoApplication in 4.018 seconds (JVM running for 4.789)
+2019-04-27 00:26:43,794  INFO - [http-nio-8080-exec-1 ] o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-04-27 00:26:43,794  INFO - [http-nio-8080-exec-1 ] org.springframework.web.servlet.DispatcherServlet  : Initializing Servlet 'dispatcherServlet'
+2019-04-27 00:26:43,801  INFO - [http-nio-8080-exec-1 ] org.springframework.web.servlet.DispatcherServlet  : Completed initialization in 7 ms
+2019-04-27 00:26:53,108  INFO - [http-nio-8080-exec-6 ] c.e.demo.feedback.controller.FeedbackController    : 前端调用方法开始----uploadFeedback---->：#{"URL地址":/feedback/upload, "HTTP方法":POST，参数：, "feedBackInfo":FeedbackInfo{, appVersion='1.0', sysVersion='7.1', osType='Android', content='后台代码写的真棒', onlineStatus='WIFI'}, "userId":3256}
+2019-04-27 00:26:53,174  INFO - [http-nio-8080-exec-6 ] c.e.demo.feedback.controller.FeedbackController    : 前端调用方法结束----uploadFeedback---->：返回值: com.example.demo.common.dto.BaseResponse@6944173c
+2019-04-27 00:26:53,178  INFO - [http-nio-8080-exec-6 ] c.e.d.c.c.m.i.RequestTimeConsumingInterceptor      : 3256    /feedback/upload                                            103ms
